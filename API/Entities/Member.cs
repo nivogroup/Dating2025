@@ -19,6 +19,10 @@ public class Member
     //Navigation Property
     [JsonIgnore]
     public List<Photo> Photos { get; set; } = [];
+
+    //For Like
+    public List<MemberLike> LikedByMembers { get; set; } = [];
+    public List<MemberLike> LikedMembers { get; set; } = [];
     
     [JsonIgnore]
     [ForeignKey(nameof(Id))]
